@@ -32,6 +32,7 @@ export default class TodoList extends React.Component {
     
 
     render() {
+        console.log(`This is: ${typeof(Todo)}`)
         return(
             <div>
                 <TodoForm  onSubmit={this.addTodo} />
@@ -42,6 +43,7 @@ export default class TodoList extends React.Component {
                         todo={todo}
                     />
                 ))}
+                <div>todos left: {this.state.todos.filter(todo => !todo.complete).length}</div>
             </div>
         )
     }
