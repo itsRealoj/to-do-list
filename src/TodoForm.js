@@ -36,6 +36,7 @@ export default class TodoForm extends React.Component {
                 placeholder = "todo..." 
             />
             <button onClick={this.handleSubmit}>add todo</button>
+            {console.log(typeof(handleChange))}
         </form>
         ) 
     }
