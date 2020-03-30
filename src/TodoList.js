@@ -16,7 +16,7 @@ export default class TodoList extends React.Component {
 
     updateTodoToShow = (s) => {
         this.setState({
-            todoToShow: s
+            todosToShow: s
         })
     }
 
@@ -54,7 +54,7 @@ export default class TodoList extends React.Component {
         return(
             <div>
                 <TodoForm  onSubmit={this.addTodo} />
-                {this.state.todos.map(todo => (
+                {todos.map(todo => (
                     <Todo 
                         key={todo.id} 
                         toggleComplete={() => this.toggleComplete(todo.id)} 
